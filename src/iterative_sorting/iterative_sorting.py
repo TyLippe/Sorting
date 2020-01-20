@@ -12,6 +12,8 @@ def selection_sort( arr ):
             #determine if this value is lower than the current smallest_index
             if arr[j] < arr[smallest_index]:
                 #if smaller, set smaller_index to j
+                print(f'Smallest: {smallest_index}')
+                print(f'Updated: {arr}')
                 smallest_index = j
         #create a temp to hold cur_index
         temp = arr[cur_index]
