@@ -35,10 +35,10 @@ def bubble_sort( arr ):
     #Loop through elements
     for i in range(0, len(arr) - 1):
         #Check the current element compared to the element to the right
-        for j in range(i, len(arr) - 1):
+        for j in range(0, len(arr) - 1):
             print(arr)
-            print(f'j+1 = {arr[j+1]}')
             print(f'j = {arr[j]}')
+            print(f'j+1 = {arr[j+1]}')
             #If element to right is lower, swap
             if arr[j] > arr[j+1]:
                 temp = arr[j+1]
