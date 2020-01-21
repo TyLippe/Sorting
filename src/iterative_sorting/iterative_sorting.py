@@ -23,6 +23,8 @@ def selection_sort( arr ):
     return arr
   
 
+  #https://www.youtube.com/watch?v=mI3KgJy_d7Y&t=155s Used the video to understand the selection sort process, found my issue was no temp
+
 
 
         # TO-DO: swap
@@ -41,6 +43,8 @@ def bubble_sort( arr ):
                 arr[j], arr[j+1] = arr[j+1], arr[j]
     return arr
 
+
+#https://www.youtube.com/watch?v=YHm_4bVOe1s Used this video to show example of Bubble Sort/ tried a couple things, did not work out and compared their code to mine.
 
 # STRETCH: implement the Count Sort function below
 def count_sort( arr, maximum=-1 ):
