@@ -23,22 +23,24 @@ def selection_sort( arr ):
 
   #https://www.youtube.com/watch?v=mI3KgJy_d7Y&t=155s Used the video to understand the selection sort process, found my issue was no temp
 
-
         # TO-DO: swap
 
-arr = [2,3,1,4,6,5]
 # Trying to find a cleaner way to do a bubble sort
 def bubble_sort( arr ): 
     #Loop through elements
-    for i in range(0, len(arr) - 1):
+    sorted = False
+    while not sorted:
+        swaps = 0
         #Check the current element compared to the element to the right
-        for j in range(0, len(arr) - 1):
+        for i in range(0, len(arr) - 1):
             #If element to right is lower, swap
-            if arr[j] > arr[j+1]:
-                temp = arr[j+1]
-                arr[j+1] = arr[j]
-                arr[j] = temp
-            #If element to right is higher, move onto the next element
+            if arr[i] > arr[i+1]:
+                swaps += 1
+                temp = arr[i+1]
+                arr[i+1] = arr[i]
+                arr[i] = temp
+        if swaps == 0:
+            sorted = True
     #Return sorted arr when complete
     return arr
 
