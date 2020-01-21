@@ -26,25 +26,8 @@ def selection_sort( arr ):
   #https://www.youtube.com/watch?v=mI3KgJy_d7Y&t=155s Used the video to understand the selection sort process, found my issue was no temp
 
 
-
         # TO-DO: swap
 
-
-# # TO-DO:  implement the Bubble Sort function below
-# def bubble_sort( arr ):
-#     #loop through elements
-#     for i in range(0, len(arr) -1):
-#         #iterate over value next to the current value
-#         for j in range(0, len(arr)-1 -i):
-#             #check if current value is greater than the value to the right
-#             if arr[j] > arr[j+1]:
-#                 print(arr)
-#                 #if value is greater, swap them around 
-#                 arr[j], arr[j+1] = arr[j+1], arr[j]
-#     return arr
-
-
-#https://www.youtube.com/watch?v=YHm_4bVOe1s Used this video to show example of Bubble Sort/ tried a couple things, did not work out and compared their code to mine.
 
 # Trying to find a cleaner way to do a bubble sort
 
@@ -54,6 +37,8 @@ def bubble_sort( arr ):
         #Check the current element compared to the element to the right
         for j in range(i, len(arr) - 1):
             print(arr)
+            print(f'j+1 = {arr[j+1]}')
+            print(f'j = {arr[j]}')
             #If element to right is lower, swap
             if arr[j] > arr[j+1]:
                 temp = arr[j+1]
@@ -62,6 +47,7 @@ def bubble_sort( arr ):
             #If element to right is higher, move onto the next element
     #Return sorted arr when complete
     return arr
+
 
 # STRETCH: implement the Count Sort function below
 def count_sort( arr, maximum=-1 ):
