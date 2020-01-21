@@ -30,21 +30,38 @@ def selection_sort( arr ):
         # TO-DO: swap
 
 
-# TO-DO:  implement the Bubble Sort function below
-def bubble_sort( arr ):
-    #loop through elements
-    for i in range(0, len(arr) -1):
-        #iterate over value next to the current value
-        for j in range(0, len(arr)-1 -i):
-            #check if current value is greater than the value to the right
-            if arr[j] > arr[j+1]:
-                print(arr)
-                #if value is greater, swap them around 
-                arr[j], arr[j+1] = arr[j+1], arr[j]
-    return arr
+# # TO-DO:  implement the Bubble Sort function below
+# def bubble_sort( arr ):
+#     #loop through elements
+#     for i in range(0, len(arr) -1):
+#         #iterate over value next to the current value
+#         for j in range(0, len(arr)-1 -i):
+#             #check if current value is greater than the value to the right
+#             if arr[j] > arr[j+1]:
+#                 print(arr)
+#                 #if value is greater, swap them around 
+#                 arr[j], arr[j+1] = arr[j+1], arr[j]
+#     return arr
 
 
 #https://www.youtube.com/watch?v=YHm_4bVOe1s Used this video to show example of Bubble Sort/ tried a couple things, did not work out and compared their code to mine.
+
+# Trying to find a cleaner way to do a bubble sort
+
+def bubble_sort( arr ): 
+    #Loop through elements
+    for i in range(0, len(arr) - 1):
+        #Check the current element compared to the element to the right
+        for j in range(i, len(arr) - 1):
+            print(arr)
+            #If element to right is lower, swap
+            if arr[j] > arr[j+1]:
+                temp = arr[j+1]
+                arr[j+1] = arr[j]
+                arr[j] = temp
+            #If element to right is higher, move onto the next element
+    #Return sorted arr when complete
+    return arr
 
 # STRETCH: implement the Count Sort function below
 def count_sort( arr, maximum=-1 ):
